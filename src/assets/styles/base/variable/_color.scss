@@ -1,0 +1,41 @@
+// theme
+$theme_primary: #952f2a;
+$theme_warn: #ff3333;
+$theme_press: #630500;
+$theme_disabled:rgba(149,47,42,0.3);
+
+
+// link
+// 链接颜色
+$linkColor_default: #576b95;
+
+// background
+// 前景色
+$backgroundColor_foreColor: #ffffff;
+// 背景色
+$backgroundColor_backColor: #f3f6f6;
+// 活跃背景色
+$backgroundColor_active: #ececec;
+
+// line
+$lineColor_default: #d9d9d9;
+
+// text
+// 缺省颜色（大段）
+$textColor_default: #353535;
+// 标题颜色
+$textColor_title: #000000;
+// 次要内容颜色
+$textColor_sub: #888888;
+// 不重要内容颜色
+$textColor_light: #b2b2b2;
+// 警告颜色
+$textColor_warn: $theme_warn;
+// 活跃颜色
+$textColor_active: $theme_primary;
+// 特殊深色底的用色
+$textColor_fordark: #ffffff;
+
+// icon
+// 部分图标颜色
+$iconColor_default: #999999;

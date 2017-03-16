@@ -1,0 +1,12 @@
+@import "base/fn";
+
+page {
+  background-color: $backgroundColor_backColor;
+  font-family: $fontDefault;
+  font-size: $fontSize_default;
+  color: $textColor_default;
+}
+
+icon {
+  vertical-align: middle;
+}

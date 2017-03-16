@@ -1,0 +1,11 @@
+@import "widget/grid";
+@import "widget/msgBox";
+@import "widget/button";
+@import "widget/search";
+@import "widget/floatingButton";
+@import "widget/detail";
+@import "widget/list";
+@import "widget/edit";
+
+@include grid();
+@include infoBox();

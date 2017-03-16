@@ -1,0 +1,29 @@
+// font
+$fontEN:-apple-system-font,"Helvetica Neue";
+$fontCN:"PingFang SC","Hiragino Sans GB","Microsoft YaHei";
+$fontSans:sans-serif;
+$fontDefault:$fontCN,$fontSans;
+
+// size
+$fontSize_default:32rpx;
+
+// 只能为阿拉伯数字信息，如金额、时间等
+$fontSize_titleBiggest: 40/16*$fontSize_default;
+
+// 页面大标题，一般用于结果、空状态等信息单一页面
+$fontSize_titleBig: 20/16*$fontSize_default;
+
+// 页面内大按钮字体，与按钮搭配使用
+$fontSize_buttonBig: 18/16*$fontSize_default;
+
+// 页面内首要层级信息，基准的，可以是连续的，如列表标题、消息气泡
+$fontSize_title: 17/16*$fontSize_default;
+
+// 页面内次要描述信息，服务于首要信息并与之关联，如列表摘要
+$fontSize_titleSub: 14/16*$fontSize_default;
+
+// 页面辅助信息，需弱化的内容，如链接，小按钮
+$fontSize_small: 13/16*$fontSize_default;
+
+// 说明文本，如版权信息等不需要用户关注的信息
+$fontSize_light: 11/16*$fontSize_default;
