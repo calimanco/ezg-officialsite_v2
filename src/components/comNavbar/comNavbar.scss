@@ -1,0 +1,15 @@
+.comNavbar {}
+
+.comNavbar-item {
+	min-width: 100px;
+	padding: 10px 20px;
+	text-align: center;
+	float: left;
+	&.mean {
+		width: 200px;
+		background: #F6424A;
+		color: #fff;
+	}
+}
+
+.comNavbar-title {}

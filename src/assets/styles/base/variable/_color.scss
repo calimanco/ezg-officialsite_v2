@@ -1,32 +1,27 @@
 // theme
-$theme_primary: #952f2a;
+$theme_primary: #FF2323;
 $theme_warn: #ff3333;
 $theme_press: #630500;
 $theme_disabled:rgba(149,47,42,0.3);
-
-
-// link
-// 链接颜色
-$linkColor_default: #576b95;
 
 // background
 // 前景色
 $backgroundColor_foreColor: #ffffff;
 // 背景色
-$backgroundColor_backColor: #f3f6f6;
+$backgroundColor_backColor: #fafafa;
 // 活跃背景色
-$backgroundColor_active: #ececec;
+$backgroundColor_active: #f1f1f1;
 
 // line
-$lineColor_default: #d9d9d9;
+$lineColor_default: #e7e7e7;
 
 // text
 // 缺省颜色（大段）
-$textColor_default: #353535;
+$textColor_default: #333333;
 // 标题颜色
 $textColor_title: #000000;
 // 次要内容颜色
-$textColor_sub: #888888;
+$textColor_sub: #999999;
 // 不重要内容颜色
 $textColor_light: #b2b2b2;
 // 警告颜色
@@ -38,4 +33,4 @@ $textColor_fordark: #ffffff;
 
 // icon
 // 部分图标颜色
-$iconColor_default: #999999;
+$iconColor_default: #c1c1c1;

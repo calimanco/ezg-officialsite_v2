@@ -1,0 +1,98 @@
+@import "../../assets/styles/base/_fn.scss";
+
+.comHeader {
+	height: 75px;
+}
+
+.comHeader-logo {
+	float: left;
+	width: 200px;
+	height: 100%;
+	padding: 20px 0;
+	text-align: center;
+
+	.logo {
+		height: 100%;
+	}
+}
+
+.comHeader-place {
+	float: left;
+	width: 200px;
+	height: 100%;
+	padding: 20px 0;
+	text-align: center;
+
+	.link {
+		display: inline-block;
+		background: $backgroundColor_active;
+		border-radius: 100px;
+		padding: 5px 10px;
+		font-size: $fontSize_small;
+	}
+
+	.iconfont {
+		color: $theme_primary;
+		margin-right: 5px;
+	}
+}
+
+.comHeader-declare {
+	float: left;
+	width: 300px;
+	height: 100%;
+	text-align: center;
+	padding: 25px 0;
+
+	.hot {
+		color: #fff;
+		background: $theme_warn;
+		font-weight: bold;
+		padding: 5px;
+		margin-right: 5px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.title {
+		font-weight: bold;
+		margin-right: 5px;
+		font-size: $fontSize_title;
+		vertical-align: middle;
+	}
+
+	.info {
+		vertical-align: middle;
+	}
+}
+
+.comHeader-option {
+	float: right;
+	height: 100%;
+	text-align: center;
+	padding: 20px 0;
+
+	.box {
+		background: $backgroundColor_active;
+		border: 1px solid $lineColor_default;
+		position: relative;
+		float: right;
+		padding: 5px 0;
+		margin-left: 20px;
+		width: 130px;
+	}
+	.iconfont{
+		color: $iconColor_default;
+	}
+	.mean{
+		position: absolute;
+		top: 28px;
+		left: -1px;
+		width: 130px;
+	}
+	.mean-list{
+		background: $backgroundColor_active;
+		border: 1px solid $lineColor_default;
+		padding: 5px 0;
+	}
+}
