@@ -13,7 +13,8 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
-    "vue": "^2.2.2"
+    "vue": "^2.2.2",
+    "vue-awesome-swiper": "^2.3.8"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
@@ -68,6 +69,7 @@
     "phantomjs-prebuilt": "^2.1.14",
     "rimraf": "^2.6.0",
     "sass-loader": "^6.0.3",
+    "script-loader": "^0.7.0",
     "selenium-server": "^3.0.1",
     "semver": "^5.3.0",
     "sinon": "^1.17.7",

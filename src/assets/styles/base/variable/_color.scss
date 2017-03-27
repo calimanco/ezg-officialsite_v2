@@ -1,16 +1,29 @@
 // theme
-$theme_primary: #FF2323;
-$theme_warn: #ff3333;
-$theme_press: #630500;
-$theme_disabled:rgba(149,47,42,0.3);
+$theme_primary: #F6424A;
+$theme_primary_press: darken($theme_primary,30);
+$theme_primary_disabled:lighten($theme_primary,25);
+$theme_primary_toDark: #F6424A;
+$theme_primary_toLight: #FF9292;
+
+$theme_warn: #FF2323;
+
+$theme_sub1: #FFD949;
+$theme_sub1_press: darken($theme_sub1,30);
+$theme_sub1_disabled:lighten($theme_sub1,25);
+
+$theme_sub2: #87DCFA;
+$theme_sub2_press: darken($theme_sub2,30);
+$theme_sub2_disabled:lighten($theme_sub2,25);
 
 // background
 // 前景色
 $backgroundColor_foreColor: #ffffff;
 // 背景色
 $backgroundColor_backColor: #fafafa;
+// 非活跃背景色
+$backgroundColor_inactive: #f1f1f1;
 // 活跃背景色
-$backgroundColor_active: #f1f1f1;
+$backgroundColor_active: #cccccc;
 
 // line
 $lineColor_default: #e7e7e7;
@@ -27,7 +40,7 @@ $textColor_light: #b2b2b2;
 // 警告颜色
 $textColor_warn: $theme_warn;
 // 活跃颜色
-$textColor_active: $theme_primary;
+$textColor_active: darken($theme_warn,30);
 // 特殊深色底的用色
 $textColor_fordark: #ffffff;
 

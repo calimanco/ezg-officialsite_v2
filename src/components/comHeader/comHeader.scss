@@ -8,32 +8,41 @@
 	float: left;
 	width: 200px;
 	height: 100%;
-	padding: 20px 0;
+	padding-top: 18px;
 	text-align: center;
 
 	.logo {
-		height: 100%;
+		width: 90px;
+	}
+
+	.text {
+		font-size: $fontSize_light;
 	}
 }
 
 .comHeader-place {
 	float: left;
-	width: 200px;
+	width: 70px;
 	height: 100%;
-	padding: 20px 0;
+	padding-top: 30px;
 	text-align: center;
 
 	.link {
 		display: inline-block;
-		background: $backgroundColor_active;
+		background: $backgroundColor_inactive;
 		border-radius: 100px;
 		padding: 5px 10px;
 		font-size: $fontSize_small;
 	}
 
 	.iconfont {
-		color: $theme_primary;
+		color: $theme_warn;
 		margin-right: 5px;
+		vertical-align: middle;
+	}
+
+	.text {
+		vertical-align: middle;
 	}
 }
 
@@ -42,21 +51,24 @@
 	width: 300px;
 	height: 100%;
 	text-align: center;
-	padding: 25px 0;
+	padding-top: 30px;
 
 	.hot {
 		color: #fff;
 		background: $theme_warn;
 		font-weight: bold;
-		padding: 5px;
+		padding: 3px;
 		margin-right: 5px;
 		display: inline-block;
+		font-size: $fontSize_title;
 		vertical-align: middle;
+		border-radius: 2px;
 	}
 
 	.title {
 		font-weight: bold;
-		margin-right: 5px;
+		margin-right: 15px;
+		font-size: $fontSize_title;
 		font-size: $fontSize_title;
 		vertical-align: middle;
 	}
@@ -70,29 +82,66 @@
 	float: right;
 	height: 100%;
 	text-align: center;
-	padding: 20px 0;
+	padding-top: 28px;
 
 	.box {
-		background: $backgroundColor_active;
-		border: 1px solid $lineColor_default;
+		background: $backgroundColor_inactive;
+		border: solid $lineColor_default;
+		border-width: 1px 1px 0 1px;
 		position: relative;
 		float: right;
-		padding: 5px 0;
+		padding: 0 10px;
 		margin-left: 20px;
-		width: 130px;
+		height: 30px;
+		line-height: 30px;
+		&:after{
+			@include setBottomLine($lineColor_default);
+		}
 	}
-	.iconfont{
+
+	.iconfont {
 		color: $iconColor_default;
 	}
-	.mean{
-		position: absolute;
-		top: 28px;
-		left: -1px;
-		width: 130px;
+
+	.cart {
+		position: relative;
+		font-size: 16px;
+
+		&:after {
+			content: attr(data-count);
+			position: absolute;
+			top: -10px;
+			right: -10px;
+			width: 15px;
+			height: 15px;
+			line-height: 15px;
+			border-radius: 50%;
+			font-size: $fontSize_small;
+			@include setLinearGradient($theme_warn,$theme_primary_toDark);
+			box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14);
+			color: $textColor_fordark;
+		}
 	}
-	.mean-list{
-		background: $backgroundColor_active;
-		border: 1px solid $lineColor_default;
-		padding: 5px 0;
+
+	.mean {
+		position: absolute;
+		top: 100%;
+		left: -1px;
+		width: 100%;
+		box-sizing: content-box;
+		border-left: 1px solid $lineColor_default;
+		border-right: 1px solid $lineColor_default;
+	}
+
+	.mean-list {
+		background: $backgroundColor_inactive;
+		position: relative;
+		&:after{
+			@include setBottomLine($lineColor_default);
+		}
+
+		&:hover {
+			background: $backgroundColor_active;
+		}
 	}
 }

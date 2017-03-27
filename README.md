@@ -5,9 +5,10 @@
 ## 说明
 
 项目使用vue-cli官方的webpack脚手架搭建，未加入vue-route。<br>
-改造webpack入口实现多页面输出，新增对sass文件的支持。
+改造webpack入口实现多页面输出，新增对sass文件的支持。<br>
+施工中。。。
 
-## 使用命令（脚手架默认）
+## 使用命令（脚手架默认，测试部分为配置）
 
 ```bash
 # install dependencies
@@ -21,15 +22,6 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
 
 ## 问题收集

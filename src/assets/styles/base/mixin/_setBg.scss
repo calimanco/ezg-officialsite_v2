@@ -1,0 +1,20 @@
+@mixin setLinearGradient($c1,$c2:null,$angle:null) {
+	 @if $angle{
+		@if $c2 {
+			background-color: $c1;
+			background-image: linear-gradient($angle, $c1 0%, $c2 100%);
+		}
+		@else {
+			background-color: $c1;
+		}
+	}
+	@else {
+		 @if $c2{
+			background-color: $c1;
+			background-image: linear-gradient($c1 0%, $c2 100%);
+		}
+		@else {
+			background-color: $c1;
+		}
+	}
+}

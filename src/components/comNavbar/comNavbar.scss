@@ -1,15 +1,163 @@
+@import "../../assets/styles/base/_fn.scss";
+
 .comNavbar {}
 
 .comNavbar-item {
 	min-width: 100px;
-	padding: 10px 20px;
+	padding: 14px 20px;
 	text-align: center;
 	float: left;
+	font-size: $fontSize_title;
+	position: relative;
+
 	&.mean {
 		width: 200px;
-		background: #F6424A;
-		color: #fff;
+		@include setLinearGradient($theme_primary);
+		color: $textColor_fordark;
+	}
+
+	&.important {
+		> .link {
+			color: $textColor_warn;
+		}
+	}
+
+	&.hot {
+		&:after {
+			content: 'Hot';
+			position: absolute;
+			right: -5px;
+			top: 8px;
+			background-color: $textColor_warn;
+			color: $textColor_fordark;
+			font-size: $fontSize_light;
+			padding: 2px 3px;
+			border-radius: 2px;
+		}
+	}
+
+	&.new {
+		&:after {
+			content: 'New';
+			position: absolute;
+			right: -5px;
+			top: 8px;
+			background-color: $textColor_warn;
+			color: $textColor_fordark;
+			font-size: $fontSize_light;
+			padding: 2px 3px;
+			border-radius: 2px;
+		}
 	}
 }
 
-.comNavbar-title {}
+.comNavbar-mean {
+	background-color: rgba(52,61,78,0.70);
+	position: absolute;
+	width: 200px;
+	top: 46px;
+	left: 0;
+	height: 360px;
+	display: table;
+}
+
+.comNavbar-mean-item {
+	display: table-row;
+
+	> .link {
+		color: $textColor_fordark;
+		display: table-cell;
+		vertical-align: middle;
+		position: relative;
+
+		&:after {
+			@include setBottomLine($lineColor_default,1px,dashed,40px);
+		}
+
+		> .iconfont {
+			margin-right: 10px;
+		}
+
+		&.active {
+			color: $textColor_warn;
+			background-color: $backgroundColor_foreColor;
+		}
+	}
+
+	&:last-child > .link:after {
+		display: none;
+	}
+}
+
+.comNavbar-mean-box {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	height: 360px;
+	padding-right: 200px;
+	overflow: hidden;
+	color: $textColor_default;
+	@include setLinearGradient($backgroundColor_foreColor);
+	border: solid $lineColor_default;
+	border-width: 1px 1px 1px 0;
+
+	> .main {
+		background: url('../../assets/images/navbarBg.png') bottom no-repeat;
+		height: 100%;
+
+		> .row {
+			display: table;
+			width: 780px;
+
+			> .title {
+				padding: 20px 0;
+				display: table-cell;
+				width: 180px;
+				color: $textColor_title;
+				vertical-align: middle;
+				font-weight: bold;
+			}
+
+			> .list {
+				padding: 20px 0;
+				vertical-align: middle;
+				display: table-cell;
+				text-align: left;
+				position: relative;
+
+				> .link {
+					margin: 10px 20px;
+					font-size: $fontSize_default;
+					display: inline-block;
+					&:hover{
+						color: $theme_primary;
+					}
+				}
+				&:after{
+					@include setBottomLine($lineColor_default, 1px, solid, 20px);
+				}
+			}
+		}
+	}
+
+	> .aside {
+		position: absolute;
+		width: 200px;
+		height: 100%;
+		right: 0;
+		top: 0;
+		background: $theme_primary;
+	}
+}
+
+.comNavbar-tel {
+	float: right;
+	font-size: $fontSize_titleBig;
+	height: 46px;
+	line-height: 46px;
+
+	.number {
+		color: $theme_primary;
+		font-weight: bold;
+	}
+}

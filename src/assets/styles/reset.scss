@@ -6,8 +6,6 @@ html {
   font-family: $fontDefault;
   font-size: $fontSize_default;
   color: $textColor_default;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -39,9 +37,11 @@ a {
   outline: none;
   color: $textColor_default;
 }
-i{
+
+i {
   font-style: normal;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -81,14 +81,6 @@ button {
   @extend input[type="text"];
 }
 
-.iconfont {
-  font-family: "iconfont" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
-  -moz-osx-font-smoothing: grayscale;
-}
 /*复选框、图片text与文本对齐*/
 .trueMiddleAlign {
   vertical-align: middle;
@@ -112,4 +104,15 @@ button {
   right: 0;
   bottom: 0;
   margin: auto;
+}
+/*字体图标*/
+.iconfont {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+  &.withShadow{
+    filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
+  }
 }

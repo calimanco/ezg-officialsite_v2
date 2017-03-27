@@ -1,42 +1,44 @@
-@mixin setTopLine($c: #C7C7C7) {
-    content: " ";
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    height: 1px;
-    border-top: 1rpx solid $c;
-    color: $c;
+@mixin setTopLine($c,$width:1px,$style:solid,$padding:0) {
+  content: "";
+  position: absolute;
+  left: $padding;
+  bottom: 0;
+  right: $padding;
+  height: 1px;
+  border-top: $width $style $c;
+  color: $c;
+  overflow: hidden;
 }
-
-@mixin setBottomLine($c: #C7C7C7) {
-    content: " ";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 1px;
-    border-bottom: 1rpx solid $c;
-    color: $c;
+@mixin setBottomLine($c,$width:1px,$style:solid,$padding:0) {
+  content: "";
+  position: absolute;
+  left: $padding;
+  bottom: 0;
+  right: $padding;
+  height: 1px;
+  border-bottom: $width $style $c;
+  color: $c;
+  overflow: hidden;
 }
-
-@mixin setLeftLine($c: #C7C7C7) {
-    content: " ";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 1px;
-    bottom: 0;
-    border-left: 1rpx solid $c;
-    color: $c;
+@mixin setLeftLine($c,$width:1px,$style:solid,$padding:0) {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: $padding;
+  bottom: $padding;
+  width: 1px;
+  border-left: $width $style $c;
+  color: $c;
+  overflow: hidden;
 }
-
-@mixin setRightLine($c: #C7C7C7) {
-    content: " ";
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    border-right: 1rpx solid $c;
-    color: $c;
+@mixin setRightLine($c,$width:1px,$style:solid,$padding:0) {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: $padding;
+  bottom: $padding;
+  width: 1px;
+  border-right: $width $style $c;
+  color: $c;
+  overflow: hidden;
 }

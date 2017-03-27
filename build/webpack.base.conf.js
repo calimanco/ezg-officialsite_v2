@@ -5,7 +5,7 @@ var vueLoaderConfig = require('./vue-loader.conf')
 // 读取多页面
 var pages = utils.getEntries('./src/pages/**/*.js')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
@@ -14,9 +14,9 @@ module.exports = {
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
-    publicPath: process.env.NODE_ENV === 'production'
-      ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+    publicPath: process.env.NODE_ENV === 'production' ?
+      config.build.assetsPublicPath :
+      config.dev.assetsPublicPath
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -26,8 +26,7 @@ module.exports = {
     }
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: "pre",
@@ -61,6 +60,10 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.exec\.js$/,
+        use: ['script-loader']
       }
     ]
   }

@@ -2,11 +2,14 @@
 <header class="comHeader container">
   <div class="comHeader-logo">
     <a href="#"><img class="logo" src="../../assets/images/logo.png"></a>
+    <p class="text">292529</p>
   </div>
   <div class="comHeader-place">
     <a href="#" class="link">
-      <i class="iconfont">+</i>
-      <span>广东</span>
+      <svg class="iconfont" aria-hidden="true">
+            <use xlink:href="#icon-more"></use>
+        </svg>
+      <span class="text">广东</span>
     </a>
   </div>
   <div class="comHeader-declare">
@@ -19,19 +22,29 @@
   <div class="comHeader-option">
     <div class="box">
       <a href="#">
-        <i class="iconfont" v-bind:dataCount="cartCount">+</i>
+        <i class="cart" :data-count="cartCount">
+            <svg class="iconfont cart" aria-hidden="true">
+                <use xlink:href="#icon-cart"></use>
+            </svg>
+        </i>
         <span class="text">我的购物车</span>
-        <i class="iconfont">+</i>
+        <svg class="iconfont" aria-hidden="true">
+            <use xlink:href="#icon-more"></use>
+        </svg>
       </a>
     </div>
-    <div class="box">
-      <i class="iconfont">+</i>
-      <span class="text" @click.stop.prevent="openMean">我的账柜</span>
+    <div class="box" @click.stop.prevent="openMean">
+      <svg class="iconfont" aria-hidden="true">
+          <use xlink:href="#icon-more"></use>
+      </svg>
+      <span class="text">我的账柜</span>
       <ul v-if="isMean" class="mean">
-        <li class="mean-list">我的服务</li>
-        <li class="mean-list">我的订单</li>
+        <li class="mean-list"><a href="#">我的服务</a></li>
+        <li class="mean-list"><a href="#">我的订单</a></li>
       </ul>
-      <i class="iconfont">+</i>
+      <svg class="iconfont" aria-hidden="true">
+          <use xlink:href="#icon-more"></use>
+      </svg>
     </div>
   </div>
 </header>
@@ -49,7 +62,7 @@ export default {
     cartCount: Number,
   },
   methods: {
-    openMean: function openMean() {
+    openMean() {
       if (this.isMean) {
         this.isMean = false;
       } else {
@@ -59,7 +72,6 @@ export default {
   },
   created() {
     document.addEventListener('click', (e) => {
-      console.log(this.$el.querySelector('.box:last-child'));
       if (!this.$el.querySelector('.box:last-child').contains(e.target)) this.isMean = false;
     });
   },
